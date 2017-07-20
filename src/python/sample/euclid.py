@@ -39,7 +39,7 @@ def hog(img):
 
 # しきい値で"す"か"つ"を決定
 def isSu(su, tsu, x):
-#     print(np.linalg.norm(hog(su) - hog(x)))
+    # サンプルのすに近いか、つに近いかで判定する
     return np.linalg.norm(hog(su) - hog(x)) < np.linalg.norm(hog(tsu) - hog(x))
 
 
